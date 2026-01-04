@@ -20,7 +20,7 @@ pipeline {
                     credentialsId: 'aws-s3-creds'
                 ]]) {
                     sh '''
-                    aws s3 sync . s3://$BUCKET_NAME \
+                    aws s3 sync . s3://BUCKET_NAME \
                         --exclude ".git/*" \
                         --exclude "Jenkinsfile"
                     '''
