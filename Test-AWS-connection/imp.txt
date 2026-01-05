@@ -1,0 +1,2 @@
+please make sure AWS pipeline plugin must be installed.
+please make sure AWS CLI package must be install in EC@
