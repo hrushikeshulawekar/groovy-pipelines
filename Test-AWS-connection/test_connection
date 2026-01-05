@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    environment {
+        AWS_DEFAULT_REGION = 'us-east-1'   // change if needed
+    }
+
+    stages {
+        stage('Test AWS Credentials') {
+            steps {
+                withCredentials([
+                    [
+                        $class: 'AmazonWebServicesCredentialsBinding',
+                        credentialsId: 'aws-creds-id'
+                    ]
+                ]) {
+                    sh '''
+                        set -e
+                        echo "Testing AWS credentials..."
+                        aws sts get-caller-identity
+                    '''
+                }
+            }
+        }
+    }
+}
