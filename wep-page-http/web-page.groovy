@@ -1,4 +1,3 @@
-#for python test
 pipeline {
     agent any
 
