@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout from GitHub') {
             steps {
                 // Replace with your GitHub repo URL
-                git branch: 'main', url: 'https://github.com/eviltouch-work/github-netlify.git'
+                git branch: 'main', url: 'https://github.com/hrushikeshulawekar/webpage.git'
             }
         }
 
