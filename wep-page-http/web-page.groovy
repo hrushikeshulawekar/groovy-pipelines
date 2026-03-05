@@ -15,7 +15,7 @@ pipeline {
                 // Copy all files into a folder for HTML Publisher
                 sh '''
                 mkdir -p website
-                cp index.html style.css website/
+                cp webpage/index.html webpage/style.css website/
                 '''
 
             }
